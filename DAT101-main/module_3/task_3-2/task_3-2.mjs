@@ -18,6 +18,7 @@ let computerGuess;
 // Variable for the amount of guesses
 let amountOfGuesses = 0;
 
+
 // While loop, this is where the computer will make guesses
 // This goes on until it has guessed right
 while (computerGuess !== targetGuess)
