@@ -52,3 +52,37 @@ printOut("--- Part 10 ----------------------------------------------------------
 /* Put your code below here!*/
 printOut("Replace this with you answer!");
 printOut(newLine);
+
+
+
+
+
+
+
+
+
+
+
+
+
+//let diceResult = dice1.toString()
+//  + dice2.toString()
+//  + dice3.toString()
+//  + dice4.toString()
+//  + dice5.toString()
+//  + dice6.toString();
+//
+//console.log(diceResult);
+//
+
+
+
+
+
+//
+
+
+
+
+
+
