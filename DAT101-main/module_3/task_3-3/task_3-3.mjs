@@ -359,6 +359,8 @@ function textEditor (text, maxSize, char, insertion)
      // Add the chars at the start
      text = placeholder + text;
 
+
+     
    } 
    // Purpose: Check if text is shorter than maxSize and if insertion is false
    // (which means we'll be adding char at the end)
