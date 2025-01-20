@@ -2,7 +2,8 @@
 import { initPrintOut, printOut, newLine } from "../../common/script/utils.mjs";
 initPrintOut(document.getElementById("txtOut"));
 
-printOut("--- Part 1 ----------------------------------------------------------------------------------------------");
+// TASK 3.3 //
+
 // Part 1
 // Objective: Create a function that prints out today's date
 // The functions should not take any parameters nor should it return anything
@@ -26,10 +27,9 @@ function dateToday()
   return today;
 }
 
-printOut("Replace this with you answer!");
-printOut(newLine);
+// Part 2
 
-printOut("--- Part 2 ----------------------------------------------------------------------------------------------");
+
 function daysUntilRelease()
 {
   // Get today's date by calling the dateToday function
@@ -58,10 +58,7 @@ function printDateAndCountdown()
 }
 
 printDateAndCountdown();
-printOut("Replace this with you answer!");
-printOut(newLine);
 
-printOut("--- Part 3 ----------------------------------------------------------------------------------------------");
 // Part 3
 // Objective: Create a function that calculates
 // and print the diameter, circumference, and area
@@ -84,10 +81,7 @@ function circleCalculation(radius)
   console.log(diameter, circumference, area)
 
 }
-printOut("Replace this with you answer!");
-printOut(newLine);
 
-printOut("--- Part 4 ----------------------------------------------------------------------------------------------");
 // PArt 4
 // Objective: Create a function that calculates
 // and prints the circumference and area of the given rectangle
@@ -111,10 +105,6 @@ function rectangleCalculation(width, height)
 
 }
 
-printOut("Replace this with you answer!");
-printOut(newLine);
-
-printOut("--- Part 5 ----------------------------------------------------------------------------------------------");
 // Part 5
 // Objective: Create a function that handles the conversion between:
 // Celsius, Fahrenheit and Kelvin
@@ -158,10 +148,7 @@ function temperatureCalculation(temperature, temperatureType)
   console.log(fahrenheit);
   console.log(kelvin);
 }
-printOut("Replace this with you answer!");
-printOut(newLine);
 
-printOut("--- Part 6 ----------------------------------------------------------------------------------------------");
 // Part 6
 // Objective : Create a function that calculates the price without WAT(sales tax)
 // The function takes two parameters: 1. Full price(number), 2. Type of tax(string)
@@ -220,10 +207,6 @@ function priceWOVAT(fullPrice, typeOfTax)
 
 }
 
-printOut("Replace this with you answer!");
-printOut(newLine);
-
-printOut("--- Part 7 ----------------------------------------------------------------------------------------------");
 // Task 7
 // Parameters :
 // Arguments :
@@ -317,8 +300,28 @@ function calculateSpeedNull (speed,distance,time)
 
 
 
-printOut("Replace this with you answer!");
-printOut(newLine);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 printOut("--- Part 8 ----------------------------------------------------------------------------------------------");
 // Objective: Create a function that takes FOUR parameters and returns a result.
@@ -332,6 +335,8 @@ printOut("--- Part 8 -----------------------------------------------------------
 
 function textEditor (text, maxSize, char, insertion)
 {
+
+  
 
  // Parameter explanation //
 
@@ -393,8 +398,11 @@ function textEditor (text, maxSize, char, insertion)
 }
 
 
-printOut("Replace this with you answer!");
-printOut(newLine);
+
+printOut(textEditor("Test",80," ",true));
+
+
+
 
 printOut("--- Part 9 ----------------------------------------------------------------------------------------------");
 // Objective: The goal here is to check if these sequences on each line hold true mathematically:
@@ -410,6 +418,7 @@ printOut("--- Part 9 -----------------------------------------------------------
 // This function takes one parameter:
 // lineNumber, which represents the line for which we want to calculate the left and right sides.
 function calculateFunction(lineNumber)
+{
 
 // Tracks the current line we're calculating
 let line = 1;
@@ -486,11 +495,29 @@ while (line !== lineNumber)
   
 
 }
+
+
+
+}
 printOut("Replace this with you answer!");
 printOut(newLine);
 
 /* Task 10*/
 printOut("--- Part 10 ---------------------------------------------------------------------------------------------");
+
+function factorial(n) {
+  // Base case: if n is 0 or 1, return 1
+  if (n === 0 || n === 1) {
+      return 1;
+  }
+  // Recursive case: n * factorial(n - 1)
+  return n * factorial(n - 1);
+}
+
+// Example usage:
+let number = 5;
+let result = factorial(number);
+console.log(`The factorial of ${number} is ${result}`);
 /* Put your code below here!*/
 printOut("Replace this with you answer!");
 printOut(newLine);

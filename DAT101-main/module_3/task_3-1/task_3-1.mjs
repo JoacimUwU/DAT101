@@ -5,25 +5,57 @@ initPrintOut(document.getElementById("txtOut"));
 printOut("--- Part 1, 2, 3 ----------------------------------------------------------------------------------------");
 /* Put your code below here!*/
 printOut("Task 1, 2 and 3");
-let wakeUpTime = 2;
-if ("Replace this") {
-  printOut("I can take the bus to school.");
+// Define the wake-up time
+let wakeUpTime = 7; // Change this value to 6, 7, or 8 to test
+
+// Get the HTML element to display the result
+const resultElement = document.getElementById('result');
+
+// If-else if-else statement to check the wake-up time
+if (wakeUpTime === 7) {
+    resultElement.innerText = "If I wake up at exactly 7 o'clock, I can take the bus to school.";
+} else if (wakeUpTime === 8) {
+    resultElement.innerText = "If I wake up exactly at 8 o'clock, I can take the train to school.";
+} else {
+    resultElement.innerText = "Otherwise, I have to take the car to school.";
 }
 printOut(newLine);
 
 printOut("--- Part 4, 5 --------------------------------------------------------------------------------------------");
 /* Put your code below here!*/
-printOut("Replace this with you answer!");
+// Define the integer variable
+let number = 0; // Change this value to test different cases (e.g., -3, 0, 7)
+
+// Get the HTML element to display the result
+const resultElement = document.getElementById('result');
+
+// If-else if-else statement to check whether the number is positive, negative, or zero
+if (number > 0) {
+    resultElement.innerText = "Positive";
+} else if (number === 0) {
+    resultElement.innerText = "Zero";
+} else {
+    resultElement.innerText = "Negative";
+}
 printOut(newLine);
 
-printOut("--- Part 6 ----------------------------------------------------------------------------------------------");
+printOut("--- Part 6, 7 ----------------------------------------------------------------------------------------------");
 /* Put your code below here!*/
-printOut("Replace this with you answer!");
-printOut(newLine);
+// Simulate an uploaded image size (random integer between 1 and 8)
+let imageSize = Math.floor(Math.random() * 8) + 1;
 
-printOut("--- Part 7 ----------------------------------------------------------------------------------------------");
-/* Put your code below here!*/
-printOut("Replace this with you answer!");
+// Get the HTML element to display the output
+const output = document.getElementById('txtOut');
+
+// Check the image size and print the appropriate message
+if (imageSize >= 4 && imageSize < 6) {
+    output.innerText = `Image size: ${imageSize}MP. Thank you!`;
+} else if (imageSize >= 6) {
+    output.innerText = `Image size: ${imageSize}MP. The image is too large.`;
+} else {
+    output.innerText = `Image size: ${imageSize}MP. The image is too small.`;
+}
+
 printOut(newLine);
 
 printOut("--- Part 8 ----------------------------------------------------------------------------------------------");

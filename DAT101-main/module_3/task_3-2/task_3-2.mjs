@@ -4,7 +4,22 @@ initPrintOut(document.getElementById("txtOut"));
 
 printOut("--- Part 1 ----------------------------------------------------------------------------------------------");
 /* Put your code below here!*/
-printOut("Replace this with you answer!");
+// Get the HTML element to display the output
+const output = document.getElementById('txtOut');
+
+// Generate the counting up line and append to the output
+let countUp = "";
+for (let i = 1; i <= 10; i++) {
+    countUp += i + " ";
+}
+output.innerHTML += countUp + "<br>"; // Add the line break
+
+// Generate the counting down line and append to the output
+let countDown = "";
+for (let i = 10; i >= 1; i--) {
+    countDown += i + " ";
+}
+output.innerHTML += countDown;
 printOut(newLine);
 
 printOut("--- Part 2 ----------------------------------------------------------------------------------------------");
