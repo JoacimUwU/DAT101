@@ -3,7 +3,6 @@ import { initPrintOut, printOut, newLine } from "../../common/script/utils.mjs";
 initPrintOut(document.getElementById("txtOut"));
 
 printOut("--- Part 1 ----------------------------------------------------------------------------------------------");
-<<<<<<< HEAD
 // Hard-coded array of numbers from 1 - 20
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
 
@@ -15,27 +14,19 @@ for (let i = 0; i < numbers.length; i++)
     // should use console log
     console.log("Number ${i + 1}: ${numbers[i]}")
 }
-=======
-/* Put your code below here!*/
->>>>>>> 5e2e6c844f2b4d6e940393b8c4043f60e32f2a85
 printOut("Replace this with you answer!");
 printOut(newLine);
 
 printOut("--- Part 2 ----------------------------------------------------------------------------------------------");
 /* Put your code below here!*/
-<<<<<<< HEAD
 // Join all eleents of the array with a dash as the separator
 const joinedNumbers = numbers.join('-');
 // Output the string to the console
 console.log(joinedNumbers);
-=======
-printOut("Replace this with you answer!");
->>>>>>> 5e2e6c844f2b4d6e940393b8c4043f60e32f2a85
 printOut(newLine);
 
 printOut("--- Part 3 ----------------------------------------------------------------------------------------------");
 /* Put your code below here!*/
-<<<<<<< HEAD
 
 // Create a constant with text
 
@@ -62,14 +53,11 @@ words.forEach((word, index) =>
 
 
 
-=======
->>>>>>> 5e2e6c844f2b4d6e940393b8c4043f60e32f2a85
 printOut("Replace this with you answer!");
 printOut(newLine);
 
 printOut("--- Part 4 ----------------------------------------------------------------------------------------------");
 /* Put your code below here!*/
-<<<<<<< HEAD
 
 const names = ["Anne", "Inger", "Kari", "Marit", "Ingrid", "Liv", "Eva", "Berit", "Astrid", "Bjørg",
      "Hilde", "Anna", "Solveig", "Marianne", "Randi", "Ida", "Nina", "Maria", "Elisabeth", "Kristin"];
@@ -96,14 +84,11 @@ console.log(names);
 removeFromArray(names, "Zelda");  // Should report that "Zelda" is not in the array
 
 
-=======
->>>>>>> 5e2e6c844f2b4d6e940393b8c4043f60e32f2a85
 printOut("Replace this with you answer!");
 printOut(newLine);
 
 printOut("--- Part 5 ----------------------------------------------------------------------------------------------");
 /* Put your code below here!*/
-<<<<<<< HEAD
 // Array of boy names
 const boyNames = ["Jakob", "Lucas", "Emil", "Oskar", "Oliver", "William", "Filip", "Noah", "Elias", "Isak", "Henrik", "Aksel", "Kasper", "Mathias", "Jonas", "Tobias", "Liam", "Håkon", "Theodor", "Magnus"];
 
@@ -118,14 +103,11 @@ console.log(mergedNames);
 
 
 
-=======
->>>>>>> 5e2e6c844f2b4d6e940393b8c4043f60e32f2a85
 printOut("Replace this with you answer!");
 printOut(newLine);
 
 printOut("--- Part 6 ----------------------------------------------------------------------------------------------");
 /* Put your code below here!*/
-<<<<<<< HEAD
 
 //
 class TBook {
@@ -149,14 +131,11 @@ const books = [book1, book2, book3];
 books.forEach(book => console.log(book.toString()));
 
 
-=======
->>>>>>> 5e2e6c844f2b4d6e940393b8c4043f60e32f2a85
 printOut("Replace this with you answer!");
 printOut(newLine);
 
 printOut("--- Part 7 ----------------------------------------------------------------------------------------------");
 /* Put your code below here!*/
-<<<<<<< HEAD
 
 const EWeekDays = {
     WeekDay1: { value: 0x01, name: "Mandag" },
@@ -179,27 +158,21 @@ keys.forEach(key => {
 
 
 
-=======
->>>>>>> 5e2e6c844f2b4d6e940393b8c4043f60e32f2a85
 printOut("Replace this with you answer!");
 printOut(newLine);
 
 printOut("--- Part 8 ----------------------------------------------------------------------------------------------");
 /* Put your code below here!*/
-<<<<<<< HEAD
 const randomNumbers = Array.from({ length: 35 }, () => Math.floor(Math.random() * 20) + 1);
 console.log(randomNumbers); // Unsorted array of random numbers
 
 numbers.sort((a, b) => a - b); // Ascending order
 console.log(randomNumbers); // Sorted array
-=======
->>>>>>> 5e2e6c844f2b4d6e940393b8c4043f60e32f2a85
 printOut("Replace this with you answer!");
 printOut(newLine);
 
 printOut("--- Part 9 ----------------------------------------------------------------------------------------------");
 /* Put your code below here!*/
-<<<<<<< HEAD
 
 const frequency = {};
 
@@ -242,13 +215,5 @@ for (let i = 0; i < rows; i++) {
 }
 
 
-=======
-printOut("Replace this with you answer!");
-printOut(newLine);
-
-/* Task 10*/
-printOut("--- Part 10 ---------------------------------------------------------------------------------------------");
-/* Put your code below here!*/
->>>>>>> 5e2e6c844f2b4d6e940393b8c4043f60e32f2a85
 printOut("Replace this with you answer!");
 printOut(newLine);

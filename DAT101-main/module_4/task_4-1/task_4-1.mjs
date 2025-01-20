@@ -139,29 +139,20 @@ printOut(newLine);
 
 printOut("--- Part 5 ----------------------------------------------------------------------------------------------");
 /* Put your code below here!*/
-<<<<<<< HEAD
 myAccount.setType("Brukskonto"); // Change to Normal account
 myAccount.deposit(50); // Deposit to reset withdrawal count
 myAccount.withdraw(20); // Should now allow withdrawals
-=======
-printOut("Replace this with you answer!");
->>>>>>> 5e2e6c844f2b4d6e940393b8c4043f60e32f2a85
 printOut(newLine);
 
 printOut("--- Part 6 ----------------------------------------------------------------------------------------------");
 /* Put your code below here!*/
-<<<<<<< HEAD
 myAccount.setType("Kredittkonto"); // Credit account allows unlimited withdrawals
 myAccount.deposit(100); // Balance becomes 140
 myAccount.withdraw(150); // Should allow negative balance
-=======
-printOut("Replace this with you answer!");
->>>>>>> 5e2e6c844f2b4d6e940393b8c4043f60e32f2a85
 printOut(newLine);
 
 printOut("--- Part 7 ----------------------------------------------------------------------------------------------");
 /* Put your code below here!*/
-<<<<<<< HEAD
 printOut("--- Part 7 ----------------------------------------------------------------------------------------------");
 
 // Deposit 12 USD
@@ -186,7 +177,3 @@ printOut(`New balance is ${myAccount.getBalance()}`); // Expected: "New balance 
 myAccount.withdraw(150.11, "SEK"); // Expected: "Withdrawal of 150.11 SEK, new balance is 0.00 NOK"
 printOut(newLine);
 
-=======
-printOut("Replace this with you answer!");
-printOut(newLine);
->>>>>>> 5e2e6c844f2b4d6e940393b8c4043f60e32f2a85
