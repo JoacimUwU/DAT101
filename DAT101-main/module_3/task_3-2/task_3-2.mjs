@@ -3,6 +3,7 @@ import { initPrintOut, printOut, newLine } from "../../common/script/utils.mjs";
 initPrintOut(document.getElementById("txtOut"));
 
 printOut("--- Part 1 ----------------------------------------------------------------------------------------------");
+<<<<<<< HEAD
 /* Put your code below here!*/
 // Get the HTML element to display the output
 const output = document.getElementById('txtOut');
@@ -20,6 +21,38 @@ for (let i = 10; i >= 1; i--) {
     countDown += i + " ";
 }
 output.innerHTML += countDown;
+=======
+// Objective: Print out two lines
+// One should print from 1-10,
+// The other should print from 10-1
+
+// Initialize an empty string to store the numbers(1-10)
+let oneToTen = "";
+
+// Initialize an empty string to store the numbers(10-1)
+let tenToOne = "";
+
+for (i = 1; i <= 10; i++)
+{
+    oneToTen += i;
+    if (i < 10) oneToTen += ",";
+}
+for (i = 10; i >= 10; i--)
+{
+    tenToOne += i;
+    // 
+    if (i > 1)tenToOne += ",";
+}
+
+printOut(oneToTen);
+printOut(tenToOne);
+printOut(newLine);
+
+
+
+
+printOut("Replace this with you answer!");
+>>>>>>> 5e2e6c844f2b4d6e940393b8c4043f60e32f2a85
 printOut(newLine);
 
 printOut("--- Part 2 ----------------------------------------------------------------------------------------------");
@@ -28,7 +61,11 @@ printOut("--- Part 2 -----------------------------------------------------------
 let targetGuess = 45;
 
 // Declare a variable for the computer to store its guess
+<<<<<<< HEAD
 let computerGuess;
+=======
+let computerGuess = 0;
+>>>>>>> 5e2e6c844f2b4d6e940393b8c4043f60e32f2a85
 
 // Variable for the amount of guesses
 let amountOfGuesses = 0;
@@ -92,6 +129,7 @@ let timeTaken = endTime - startTime;
 
 //Print out results
 
+<<<<<<< HEAD
 console.log("Part 3\n"+ computerGuessPartTwo + "\n" + amountOfGuessesPartTwo + "\n" +timeTaken)
 printOut("Replace this with you answer!");
 printOut(newLine);
@@ -103,6 +141,23 @@ printOut("--- Part 4 -----------------------------------------------------------
 
 let primeNumbers = [];
 
+=======
+printOut("Tallet er " + computerGuessPartTwo)
+printOut("Datamaskinen brukte " + amountOfGuessesPartTwo + "runder")
+printOut("Og det tok" + timeTaken + "millisek.")
+printOut(newLine)
+//console.log("Part 3\n"+ computerGuessPartTwo + "\n" + amountOfGuessesPartTwo + "\n" +timeTaken)
+
+printOut("--- Part 4 ----------------------------------------------------------------------------------------------");
+//Part 4
+// Objective: Use a combination of while and for loops to print out all prime numbers greater than one and less than 200
+
+// Create an empty array to store all prime numbers we find
+let primeNumbers = [];
+
+// Boolean value for checking if a number is a prime
+// We assume its a prime number before doing any division 
+>>>>>>> 5e2e6c844f2b4d6e940393b8c4043f60e32f2a85
 let isPrime = true;
 
 // Main for loop
@@ -123,8 +178,12 @@ for (let i = 2; i <= 199;i++)
   // This for loop will help us check if the number is a prime number or not
   for (let x = 2; x < currentNumber; x++)
     // it is a prime number
+<<<<<<< HEAD
     // A boolean value, set to true, because we want to start by assuming
 
+=======
+    // A boolean value, set to true, because we want to start by assuming its a prime number
+>>>>>>> 5e2e6c844f2b4d6e940393b8c4043f60e32f2a85
   {
     if (currentNumber % x === 0)
     {
@@ -132,12 +191,19 @@ for (let i = 2; i <= 199;i++)
       break;
     }
   }
+<<<<<<< HEAD
+=======
+
+  // If the number is a prime number
+  // Add it to the array
+>>>>>>> 5e2e6c844f2b4d6e940393b8c4043f60e32f2a85
   if (isPrime)
   {
     primeNumbers.push(i);
   }
 }
 
+<<<<<<< HEAD
 console.log("Prime numbers")
 console.log(primeNumbers)
 printOut("Replace this with you answer!");
@@ -146,12 +212,22 @@ printOut(newLine);
 printOut("--- Part 5 ----------------------------------------------------------------------------------------------");
 //Part 5
 
+=======
+printOut("Prime numbers between 2 and 199: ")
+printOut(primeNumbers.join(", "));
+printOut(newLine)
+
+printOut("--- Part 5 ----------------------------------------------------------------------------------------------");
+
+// Part 5
+>>>>>>> 5e2e6c844f2b4d6e940393b8c4043f60e32f2a85
 // Objective is to use nested loops to print a grid with 9 columns and 7 rows,
 // where each cell contains text in the format KxRy, where x is the column number and y is the row number
 
 //Row = X
 //column = Y
 for (let row = 1; row <= 7; row++)
+<<<<<<< HEAD
     {
       let rowText = '';
     
@@ -164,6 +240,39 @@ for (let row = 1; row <= 7; row++)
     }
 printOut("Replace this with you answer!");
 printOut(newLine);
+=======
+    // Outer for loop
+    // This outer loop iterates through each row, from 1 to 7.
+    {
+        // At the start of each row we create an empty string rowText
+      let rowText = '';
+    
+    
+      // This inner loop goes through each column , from 1 to 9, for the current row
+      // Inside the loop, the col represents the column number 
+      for (let col = 1; col <= 9; col++)
+      {
+
+        // rowText
+        // For each cell in the current row, we create a string like "K1R1, K2R1"
+        // We concatenate this cell to rowText
+        // padStart explanation //
+        // Makes each cell 5 characters wide and aligned to the right
+        rowText += `K${col}R${row}`.padStart(5);
+
+        if (col < 9)
+        {
+            rowText += " ";
+        }
+        
+      }
+
+      // Print the row after adding all columns  
+      printOut(rowText);
+    }
+    printOut(rowText.trim());
+    printOut(newLine);
+>>>>>>> 5e2e6c844f2b4d6e940393b8c4043f60e32f2a85
 
 printOut("--- Part 6 ----------------------------------------------------------------------------------------------");
 //Part 6
@@ -212,6 +321,13 @@ for (let i = 1; i <= 5; i++)
 printOut("Replace this with you answer!");
 printOut(newLine);
 
+<<<<<<< HEAD
+=======
+
+printOut("Replace this with you answer!");
+printOut(newLine);
+
+>>>>>>> 5e2e6c844f2b4d6e940393b8c4043f60e32f2a85
 printOut("--- Part 7 ----------------------------------------------------------------------------------------------");
 //PArt 7 Yahtzee!
 
@@ -313,3 +429,7 @@ for (let i = i; i <= 6; i++)
 printOut("Replace this with you answer!");
 printOut(newLine);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5e2e6c844f2b4d6e940393b8c4043f60e32f2a85

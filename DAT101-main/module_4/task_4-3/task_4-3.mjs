@@ -48,6 +48,7 @@ const MovieGenre = [
 //--- Part 1 ----------------------------------------------------------------------------------------------
 /* Put your code below here!*/
 
+<<<<<<< HEAD
 function cmbTask1CalculateClick() {
   const length = parseFloat(document.getElementById("txtTask1Length").value);
   const width = parseFloat(document.getElementById("txtTask1Width").value);
@@ -178,3 +179,22 @@ function cmbAddMovieClick() {
 populateMovieGenreDropdown();
 document.getElementById("cmbAddMovie").addEventListener("click", cmbAddMovieClick);
 
+=======
+//--- Part 2 ----------------------------------------------------------------------------------------------
+/* Put your code below here!*/
+
+//--- Part 3 ----------------------------------------------------------------------------------------------
+/* Put your code below here!*/
+
+//--- Part 4 ----------------------------------------------------------------------------------------------
+/* Put your code below here!*/
+
+//--- Part 5 ----------------------------------------------------------------------------------------------
+/* Put your code below here!*/
+
+//--- Part 6 ----------------------------------------------------------------------------------------------
+/* Put your code below here!*/
+
+//--- Part 7 ----------------------------------------------------------------------------------------------
+/* Put your code below here!*/
+>>>>>>> 5e2e6c844f2b4d6e940393b8c4043f60e32f2a85

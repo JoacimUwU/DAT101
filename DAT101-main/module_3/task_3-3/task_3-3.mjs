@@ -297,32 +297,6 @@ function calculateSpeedNull (speed,distance,time)
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 printOut("--- Part 8 ----------------------------------------------------------------------------------------------");
 // Objective: Create a function that takes FOUR parameters and returns a result.
 // Parameter one: A text string

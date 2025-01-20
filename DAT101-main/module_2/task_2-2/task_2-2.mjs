@@ -51,6 +51,7 @@ printOut(newLine);
 printOut("--- Part 10 ---------------------------------------------------------------------------------------------");
 /* Put your code below here!*/
 printOut("Replace this with you answer!");
+<<<<<<< HEAD
 printOut(newLine);
 
 
@@ -86,3 +87,6 @@ printOut(newLine);
 
 
 
+=======
+printOut(newLine);
+>>>>>>> 5e2e6c844f2b4d6e940393b8c4043f60e32f2a85
