@@ -12,33 +12,52 @@
     <ol>
       <li>Where should you use constants, and where should you use variables? Can they all be constants?</li>
       <p>
-				[Replace this with you answer]
-			</p>
+        Use constants (<code>const</code>) when the value should never change during the program execution (e.g., <code>const pi = 3.14</code>). Use variables (<code>let</code>) for values that might change (e.g., user input, counters). Not all values can be constants because some need to change depending on program logic.
+      </p>
       <li>How do parentheses affect the arithmetic outcome of an expression?</li>
       <p>
-				[Replace this with you answer]
-			</p>
+        Parentheses change the precedence of operations in an expression. Without parentheses, operations follow the default precedence (multiplication/division > addition/subtraction). Adding parentheses lets you control the order in which parts of the expression are evaluated.
+        <br />
+        Example: 
+        <code>(2 + 3) * 4 = 20</code> vs. <code>2 + 3 * 4 = 14</code>.
+      </p>
       <li>How do we limit floating-point numbers to a given number of decimals?</li>
       <p>
-				[Replace this with you answer]
-			</p>
+        Use the <code>.toFixed()</code> method. For example:
+        <br />
+        <code>let value = 3.14159; value.toFixed(2)</code> limits the value to <code>3.14</code>. This is useful for formatting outputs.
+      </p>
       <li>How can we compare two floating-point values to see if they are equal (is 12.199999 the same as 12.2)?</li>
       <p>
-				[Replace this with you answer]
-			</p>
+        Compare them using a small tolerance value to account for floating-point precision issues:
+        <br />
+        <code>Math.abs(12.199999 - 12.2) < 0.00001</code> (returns <code>true</code>).
+      </p>
       <li>What do comparison operators return, and how can we check if they are FALSE or TRUE?</li>
       <p>
-				[Replace this with you answer]
-			</p>
+        Comparison operators return a Boolean value (<code>true</code> or <code>false</code>). You can check their result directly in conditions or log them to the console.
+        <br />
+        Example: 
+        <code>console.log(5 > 3); // true</code>, <code>console.log(2 === 3); // false</code>.
+      </p>
       <li>How does the Math.random() function work, and what can it be used for?</li>
       <p>
-				[Replace this with you answer]
-			</p>
+        The <code>Math.random()</code> function generates a random decimal number between <code>0</code> (inclusive) and <code>1</code> (exclusive). You can scale it to generate numbers in a range.
+        <br />
+        Example: 
+        <code>Math.floor(Math.random() * 10) + 1</code> generates a random number between 1 and 10.
+      </p>
       <li>What is modulus (%), and when do we need this operator in mathematical operations?</li>
       <p>
-				[Replace this with you answer]
-			</p>
+        The modulus operator (<code>%</code>) returns the remainder of a division.
+        <br />
+        Example: 
+        <code>10 % 3 = 1</code> (10 divided by 3 leaves a remainder of 1).
+        <br />
+        It's commonly used for tasks like determining even/odd numbers: 
+        <code>if (x % 2 === 0)</code>, cycling through ranges, and finding remainders.
+      </p>
     </ol>
-		<script type="module" src="./task_2-2.mjs" defer></script>
+    <script type="module" src="./task_2-2.mjs" defer></script>
   </body>
 </html>
