@@ -118,7 +118,7 @@ randomNumbers.forEach(num => {
 Object.entries(frequency)
     .sort((a, b) => b[1] - a[1] || a[0] - b[0]) // Sort by frequency and number
     .forEach(([num, count]) => {
-        printOut(`Number ${num} appears ${count} times.`);
+        printOut(`Number ${num} appears ${count} times .`);
     });
 printOut(newLine);
 
