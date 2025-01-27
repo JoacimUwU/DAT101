@@ -100,7 +100,7 @@ printOut(`19th character: ${text.charAt(18)}`);
 // Log 8 characters starting at position 35
 printOut(`Characters from position 35: ${text.slice(34, 42)}`);
 
-// Find the starting index of the word "earth"
+// Find the starting index of the word "earth "
 printOut(`Index of 'earth': ${text.indexOf("earth")}`);
 
 printOut(newLine);
