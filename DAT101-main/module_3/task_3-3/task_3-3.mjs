@@ -169,5 +169,5 @@ function factorial(n) {
 }
 
 let factResult = factorial(5);
-printOut(`Factorial of 5: ${factResult}`);
+printOut(`Factorial of 5 : ${factResult}`);
 printOut(newLine);
