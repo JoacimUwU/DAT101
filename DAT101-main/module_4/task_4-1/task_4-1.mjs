@@ -124,7 +124,7 @@ printOut("--- Part 7 -----------------------------------------------------------
 myAccount.deposit(12, "USD"); // Expected: "Deposit of 12.00 USD, new balance is 259.94 NOK"
 
 // Withdraw 10 GBP
-myAccount.withdraw(10, "GBP"); // Expected: "Withdrawal of 10.00 GBP, new balance is 141.88 NOK"
+myAccount.withdraw(10, "GBP"); // Expected: "Withdrawal of 10.00 GBP, new balance is 141.88 NOK "
 
 // Change currency to CAD
 myAccount.setCurrencyType("CAD"); // Expected: "The account currency has changed from NOK to CAD"
