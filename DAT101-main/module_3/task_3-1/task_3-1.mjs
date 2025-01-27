@@ -92,7 +92,7 @@ if (grade >= 90) {
 } else if (grade >= 50) {
     printOut(`Grade: ${grade}. You passed.`);
 } else {
-    printOut(`Grade: ${grade}. You failed. Better luck next time. `);
+    printOut(`Grade: ${grade}. You failed. Better luck next time.`);
 }
 
 printOut(newLine);
