@@ -177,6 +177,6 @@ if (twoOfAKind && fourOfAKind) {
 }
 
 if (counter.some(count => count === 6)) {
-  printOut("Yahtzee Achieved!");
+  printOut("Yahtzee Achieved! ");
 }
 printOut(newLine);
