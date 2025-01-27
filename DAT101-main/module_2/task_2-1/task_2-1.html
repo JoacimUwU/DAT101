@@ -1,61 +1,82 @@
 <!DOCTYPE html>
-<html lang="en" style="display: table; margin: auto;">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Submission 2.1</title>
+  <style>
+    /* Simple styling */
+    body { 
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+    .part {
+      background: #f5f5f5;
+      padding: 15px;
+      margin: 15px 0;
+      border-radius: 5px;
+    }
+  </style>
 </head>
 <body>
-<script>
-  /* write your code below this line  🙂 */
-
+  <h1>DAT101 Submission</h1>
   
-  // Part 1
-  // The <script> tag is placed before the closing </body> tag for better performance.
+  <!-- Output container -->
+  <div id="output"></div>
 
-  // Part 2
-  // Declaring variables
+<script>
+"use strict"; // Strict mode first!
+
+// ============ Part 2: Variables ============
 let username = "Joacim";
 let userAge = 28;
+const COURSE_NAME = "DAT101";
+const PI = 3.14;
 
-// Declaring constants
-const courseName = "DAT101";
-const pi = 3.14;
+// ============ Part 3: Different Types ============
+let isStudent = true;
+let grade = 89.5;
+let message = "Welcome to DAT101";
+const user = { name: "Joacim", age: 28 };
 
-// Output to console
-console.log(username, userAge, courseName, pi);
-
-// Part 3
-// Different variable types
-let isStudent = true; // Boolean
-let grade = 89.5; // Float
-let message = "Welcome to DAT101"; // String
-const user = { name: "Joacim", age: 28 }; // Object
-
-// Output to console
-console.log(isStudent, grade, message, user);
-
-// Part 4
-// Implicit declaration (not recommended)
-valuePI = 3.14; 
-console.log(valuePI);
-
-// Explicit declaration
+// ============ Part 4: Explicit Declaration ============
 let explicitValue = 3.14;
-console.log(explicitValue);
 
-"use strict";
+// ============ Part 5: Constants ============
+const CONSTANT_VALUE = 10;
 
-// This will throw an error because implicit declarations are not allowed in strict mode
-// valuePI = 3.14; 
+// ============ Display All Parts ============
+const output = document.getElementById('output');
 
-// Part 5
-const constantValue = 10;
-console.log("Original constant:", constantValue);
+// Using template literals for clean HTML
+output.innerHTML = `
+  <div class="part">
+    <h3>Part 2: Variables</h3>
+    <p>Name: ${username}</p>
+    <p>Age: ${userAge}</p>
+    <p>Course: ${COURSE_NAME}</p>
+    <p>PI: ${PI}</p>
+  </div>
 
-// This will throw an error
-// constantValue = 20;
+  <div class="part">
+    <h3>Part 3: Data Types</h3>
+    <p>Is student: ${isStudent}</p>
+    <p>Grade: ${grade}</p>
+    <p>Message: ${message}</p>
+    <p>User Object: ${JSON.stringify(user)}</p>
+  </div>
 
+  <div class="part">
+    <h3>Part 4: Explicit Declaration</h3>
+    <p>Value: ${explicitValue}</p>
+  </div>
 
+  <div class="part">
+    <h3>Part 5: Constants</h3>
+    <p>Constant Value: ${CONSTANT_VALUE}</p>
+  </div>
+`;
 </script>
 </body>
 </html>
