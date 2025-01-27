@@ -2,7 +2,6 @@
 import { initPrintOut, printOut, newLine } from "../../common/script/utils.mjs";
 initPrintOut(document.getElementById("txtOut"));
 
-<<<<<<< HEAD
 // Define the account types in a constant object
 const AccountType = {
     Normal: "Brukskonto",
@@ -25,13 +24,13 @@ class TAccount {
     }
 
     setType(newType) {
-        console.log(`Account is changed from ${this.type} to ${newType}`);
+        printOut(`Account is changed from ${this.type} to ${newType}`);
         this.type = newType;
         this.withdrawCount = 0; // Reset withdrawal count
     }
 
     setCurrencyType(newCurrency) {
-        console.log(`The account currency has changed from ${this.currencyType} to ${newCurrency}`);
+        printOut(`The account currency has changed from ${this.currencyType} to ${newCurrency}`);
         this.currencyType = newCurrency;
     }
 
@@ -43,7 +42,7 @@ class TAccount {
         const exchangeRate = this.getExchangeRate(currency);
         const amountInNOK = amount * exchangeRate;
         this.balance += amountInNOK;
-        console.log(`Deposit of ${amount.toFixed(2)} ${currency}, new balance is ${this.balance.toFixed(2)} NOK`);
+        printOut(`Deposit of ${amount.toFixed(2)} ${currency}, new balance is ${this.balance.toFixed(2)} NOK`);
     }
 
     withdraw(amount, currency = "NOK") {
@@ -51,12 +50,12 @@ class TAccount {
         const amountInNOK = amount * exchangeRate;
 
         if (this.balance < amountInNOK) {
-            console.log(`Insufficient funds for withdrawal of ${amount.toFixed(2)} ${currency}`);
+            printOut(`Insufficient funds for withdrawal of ${amount.toFixed(2)} ${currency}`);
             return;
         }
 
         this.balance -= amountInNOK;
-        console.log(`Withdrawal of ${amount.toFixed(2)} ${currency}, new balance is ${this.balance.toFixed(2)} NOK`);
+        printOut(`Withdrawal of ${amount.toFixed(2)} ${currency}, new balance is ${this.balance.toFixed(2)} NOK`);
     }
 
     getExchangeRate(currency) {
@@ -72,25 +71,16 @@ class TAccount {
     }
 }
 
-
-
 printOut("--- Part 1 ----------------------------------------------------------------------------------------------");
 
-
 // Print account types
-printOut("`${AccountType.Normal}, ${AccountType.Saving}, ${AccountType.Credit}, ${AccountType.Pension}`");
+printOut(`${AccountType.Normal}, ${AccountType.Saving}, ${AccountType.Credit}, ${AccountType.Pension}`);
 printOut(newLine);
-
-
 
 // Create an instance of TAccount with "Normal" account type
 const myAccount = new TAccount("Brukskonto");
 
-
-
-
 printOut("--- Part 2 ----------------------------------------------------------------------------------------------");
-
 
 // Change the account type to "Saving"
 printOut(myAccount.toString());
@@ -98,31 +88,13 @@ myAccount.setType("Sparekonto");
 printOut(myAccount.toString());
 printOut(newLine);
 
-
 printOut("--- Part 3 ----------------------------------------------------------------------------------------------");
 myAccount.deposit(100);
 myAccount.withdraw(25);
-console.log(`My account balance is ${myAccount.getBalance()}`);
-=======
-printOut("--- Part 1 ----------------------------------------------------------------------------------------------");
-/* Put your code below here!*/
-printOut("Replace this with you answer!");
-printOut(newLine);
-
-printOut("--- Part 2 ----------------------------------------------------------------------------------------------");
-/* Put your code below here!*/
-printOut("Replace this with you answer!");
-printOut(newLine);
-
-printOut("--- Part 3 ----------------------------------------------------------------------------------------------");
-/* Put your code below here!*/
-printOut("Replace this with you answer!");
->>>>>>> 5e2e6c844f2b4d6e940393b8c4043f60e32f2a85
+printOut(`My account balance is ${myAccount.getBalance()}`);
 printOut(newLine);
 
 printOut("--- Part 4 ----------------------------------------------------------------------------------------------");
-/* Put your code below here!*/
-<<<<<<< HEAD
 myAccount.deposit(25); // Balance becomes 100
 myAccount.withdraw(30); // Balance becomes 70
 myAccount.withdraw(30); // Balance becomes 40
@@ -132,27 +104,20 @@ myAccount.withdraw(30); // Should trigger withdrawal limit message
 // Change account type to "Pensjonskonto"
 myAccount.setType("Pensjonskonto");
 myAccount.withdraw(10); // Should not allow withdrawal for "Pensjonskonto"
-=======
-printOut("Replace this with you answer!");
->>>>>>> 5e2e6c844f2b4d6e940393b8c4043f60e32f2a85
 printOut(newLine);
 
 printOut("--- Part 5 ----------------------------------------------------------------------------------------------");
-/* Put your code below here!*/
 myAccount.setType("Brukskonto"); // Change to Normal account
 myAccount.deposit(50); // Deposit to reset withdrawal count
 myAccount.withdraw(20); // Should now allow withdrawals
 printOut(newLine);
 
 printOut("--- Part 6 ----------------------------------------------------------------------------------------------");
-/* Put your code below here!*/
 myAccount.setType("Kredittkonto"); // Credit account allows unlimited withdrawals
 myAccount.deposit(100); // Balance becomes 140
 myAccount.withdraw(150); // Should allow negative balance
 printOut(newLine);
 
-printOut("--- Part 7 ----------------------------------------------------------------------------------------------");
-/* Put your code below here!*/
 printOut("--- Part 7 ----------------------------------------------------------------------------------------------");
 
 // Deposit 12 USD

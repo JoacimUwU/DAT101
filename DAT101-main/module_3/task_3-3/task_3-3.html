@@ -10,8 +10,47 @@
       <span id="txtOut" style="white-space: nowrap"></span>
     </div>
     <ol>
-      <li>[Write the question here, and copy this for more questions]</li>
-      <p>[Write your answer here, and copy this for more answers]</p>
+      <li>What is the difference between invoking and creating a function?</li>
+      <p>
+        Creating a function involves defining it using <code>function</code> or arrow syntax. Invoking a function runs it by calling its name followed by parentheses.
+        <br />
+        Example:
+        <code>
+          function greet() { console.log("Hello!"); } greet();
+        </code>
+      </p>
+      <li>Explain the syntax regarding semicolons and code blocks.</li>
+      <p>
+        Semicolons terminate statements but are optional due to automatic semicolon insertion. Code blocks use curly braces <code>{}</code> to group statements.
+      </p>
+      <li>What happens when we try to store values from a function when it doesn't return any?</li>
+      <p>
+        The variable will be <code>undefined</code>. Example:
+        <code>
+          function noReturn() {} let result = noReturn(); // result is undefined.
+        </code>
+      </p>
+      <li>How do we separate parameters from each other when creating a function?</li>
+      <p>
+        Parameters are separated by commas in the function declaration and when passing arguments during invocation.
+        <br />
+        Example: <code>function example(a, b, c) {}</code>
+      </p>
+      <li>Explain how parameter names are related during the invocation and creation of a function.</li>
+      <p>
+        Parameters act as placeholders. During invocation, arguments map to these placeholders in the same order.
+      </p>
+      <li>Explain why a parameter is undefined when a function call is missing a parameter.</li>
+      <p>
+        A missing parameter defaults to <code>undefined</code> unless a default value is provided.
+      </p>
+      <li>Explain what happens when we use recursive functions.</li>
+      <p>
+        Recursive functions call themselves and require a base case to avoid infinite recursion. Example:
+        <code>
+          function factorial(n) { if (n === 0) return 1; return n * factorial(n - 1); }
+        </code>
+      </p>
     </ol>
     <script type="module" src="./task_3-3.mjs" defer></script>
   </body>

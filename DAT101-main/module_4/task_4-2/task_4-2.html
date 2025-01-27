@@ -10,15 +10,64 @@
       <span id="txtOut" style="white-space: nowrap"></span>
     </div>
     <ol>
-      <li>1.What is an array?</li>
-      <p>An array is a data structure that can store multiple values under a single name. Each value can be accessed by its index (position in the array), starting from zero.</p>
-            
-      <li>2.What does it mean to "hardcode" in programming?</li>
-      <p>Hardcoding refers to directly embedding data into the source code instead of dynamically generating or retrieving it during runtime. This makes the data less flexible and harder to update.</p>
+      <li>What is an array?</li>
+      <p>
+        An array is a data structure that can store multiple values under a single name. Each value can be accessed by its index (position in the array), starting from zero.
+        <br />
+        Example: <code>let numbers = [1, 2, 3];</code>
+      </p>
+      <li>What does it mean to "hardcode" when we talk about programming?</li>
+      <p>
+        Hardcoding refers to embedding fixed values directly into the source code instead of dynamically generating or retrieving them during runtime. 
+        <br />
+        Example: <code>let colors = ["red", "green", "blue"];</code>
+      </p>
+      <li>Explain in plain text what happens in Task 3, and how we can traverse (iterate) the array when we (humans) don’t "know" how long the array is.</li>
+      <p>
+        In Task 3, the text string is converted into an array, with each word as an element. To traverse an array of unknown length, we use loops such as <code>for</code> or <code>forEach</code>. 
+        <br />
+        Example: 
+        <code>
+          for (let i = 0; i < array.length; i++) { console.log(array[i]); }
+        </code>
+      </p>
+      <li>Why is it beneficial to store instances of a class in arrays, as in Task 4?</li>
+      <p>
+        Storing instances of a class in arrays allows us to organize and manipulate objects more efficiently. For example:
+        <ul>
+          <li>We can sort or filter objects based on attributes.</li>
+          <li>Loops make it easy to apply operations to all instances.</li>
+        </ul>
+      </p>
+      <li>
+        Try your best to explain the <code>EWeekDays</code> object from Task 7. How do we use the "value" attribute, for example? In what way do "WeekDay", "Workdays", and "Weekends" differ from each other? If we wanted to create a new element "WorkoutDays", which would contain "Monday", "Wednesday", and "Thursday", how would it ideally look?
+      </li>
+      <p>
+        The <code>EWeekDays</code> object categorizes days into groups like "Workdays" and "Weekends" using keys. The "value" attribute retrieves the specific days in a group.
+        <br />
+        "WorkoutDays" could look like this:
+        <code>
+          WorkoutDays: { name: "Workout Days", days: ["Monday", "Wednesday", "Thursday"] }
+        </code>
+      </p>
+      <li>In Task 8, we will use a "callback" routine when sorting. Explain how such a "callback" routine works.</li>
+      <p>
+        A callback function in sorting determines the order of elements. The function compares two elements and returns:
+        <ul>
+          <li>A negative value if the first element comes before the second.</li>
+          <li>A positive value if the first element comes after the second.</li>
+          <li>Zero if the elements are equal.</li>
+        </ul>
+        Example:
+        <code>
+          array.sort((a, b) => a - b); // Sorts numbers in ascending order.
+        </code>
+      </p>
+      <li>
+        What happens in the sorting routines you have created? Try to explain how the array can figure out if an element should come before or after another.
+      </li>
+      <p>
+        <script type="module" src="./task_4-2.mjs" defer></script>
+      </body>
+    </html>
 
-      <li></li>
-      <p></p>
-    </ol>
-    <script type="module" src="./task_4-2.mjs" defer></script>
-  </body>
-</html>

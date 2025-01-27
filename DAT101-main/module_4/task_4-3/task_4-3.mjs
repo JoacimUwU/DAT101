@@ -1,100 +1,76 @@
 "use strict";
+import { initPrintOut, printOut, newLine } from "../../common/script/utils.mjs";
+initPrintOut(document.getElementById("txtOut"));
 
-const CarTypes = [
-  { value: 1, caption: "Aston Martin" },
-  { value: 2, caption: "Bentley" },
-  { value: 3, caption: "Alfa Romeo" },
-  { value: 4, caption: "Ferrari" },
-  { value: 5, caption: "Subaru" },
-  { value: 6, caption: "Porsche" },
-  { value: 7, caption: "Tesla" },
-  { value: 8, caption: "Toyota" },
-  { value: 9, caption: "Renault" },
-  { value: 10, caption: "Peugeot" },
-  { value: 11, caption: "Suzuki" },
-  { value: 12, caption: "Mitsubishi" },
-  { value: 13, caption: "Nissan" },
-];
-
-const GirlsNames = ["Anne", "Inger", "Kari", "Marit", "Ingrid", "Liv", "Eva", "Berit", "Astrid", "Bjørg", "Hilde", "Anna", "Solveig", "Marianne", "Randi", "Ida", "Nina", "Maria", "Elisabeth", "Kristin"];
-
-const MovieGenre = [
-  "Action",
-  "Adventure",
-  "Animation",
-  "Biography",
-  "Comedy",
-  "Crime",
-  "Documentary",
-  "Drama",
-  "Family",
-  "Fantasy",
-  "Film Noir",
-  "History",
-  "Horror",
-  "Music",
-  "Musical",
-  "Mystery",
-  "Romance",
-  "Sci-Fi",
-  "Short",
-  "Sport",
-  "Superhero",
-  "Thriller",
-  "War",
-  "Western",
-];
-
-//--- Part 1 ----------------------------------------------------------------------------------------------
-/* Put your code below here!*/
-
+printOut("--- Part 1 ----------------------------------------------------------------------------------------------");
+// Rectangle Calculation: Calculate perimeter and area
 function cmbTask1CalculateClick() {
-  const length = parseFloat(document.getElementById("txtTask1Length").value);
-  const width = parseFloat(document.getElementById("txtTask1Width").value);
+    // Get input values for width and height
+    const width = parseFloat(document.getElementById("txtRectWidth").value);
+    const height = parseFloat(document.getElementById("txtRectHeight").value);
 
-  if (isNaN(length) || isNaN(width)) {
-      alert("Please enter valid numbers for length and width.");
-      return;
-  }
+    // Validate inputs to ensure they are numbers
+    if (isNaN(width) || isNaN(height)) {
+        alert("Please enter valid numbers for width and height.");
+        return;
+    }
 
-  const perimeter = 2 * (length + width);
-  const area = length * width;
+    // Calculate perimeter and area
+    const perimeter = 2 * (width + height);
+    const area = width * height;
 
-  document.getElementById("txtTask1Output").innerText = `Perimeter: ${perimeter}, Area: ${area}`;
+    // Output the results
+    printOut(`Circumference: ${perimeter}, Area: ${area}`);
 }
+document.getElementById("cmbTask1Calculate").addEventListener("click", cmbTask1CalculateClick);
+printOut(newLine);
 
-//--- Part 2 ----------------------------------------------------------------------------------------------
+printOut("--- Part 2 ----------------------------------------------------------------------------------------------");
+// Word Collector: Add words to a list and display them
 const task2Words = [];
 
 function txtTask2WordKeyPress(event) {
     if (event.key === "Enter") {
+        // Get the word from the input field
         const wordInput = document.getElementById("txtTask2Word");
         const word = wordInput.value.trim();
+
+        // If the input is not empty, add it to the list
         if (word) {
             task2Words.push(word);
-            document.getElementById("txtTask2Output").innerText =
-                `Words (${task2Words.length}): ${task2Words.join(", ")}`;
-            wordInput.value = ""; // Clear the input field
+
+            // Display the updated list of words
+            printOut(`Words (${task2Words.length}): ${task2Words.join(", ")}`);
+
+            // Clear the input field
+            wordInput.value = "";
         }
     }
 }
 document.getElementById("txtTask2Word").addEventListener("keypress", txtTask2WordKeyPress);
+printOut(newLine);
 
-
-//--- Part 3 ----------------------------------------------------------------------------------------------
+printOut("--- Part 3 ----------------------------------------------------------------------------------------------");
+// Checkbox Selection: Display selected checkboxes
 function cmbTask3CheckClick() {
-  const checkboxes = document.querySelectorAll("input[name='task3Checkbox']:checked");
-  const selectedValues = Array.from(checkboxes).map(cb => cb.value);
-  document.getElementById("txtTask3Output").innerText =
-      selectedValues.length > 0 ? `Selected: ${selectedValues.join(", ")}` : "No checkboxes selected.";
+    // Get all selected checkboxes
+    const checkboxes = document.querySelectorAll("input[name='chkTask3']:checked");
+    const selectedValues = Array.from(checkboxes).map(cb => cb.value);
+
+    // Display the selected checkboxes or a message if none are selected
+    printOut(selectedValues.length > 0 ? `Selected: ${selectedValues.join(", ")}` : "No checkboxes selected.");
 }
+document.getElementById("cmbTask3CheckAnswer").addEventListener("click", cmbTask3CheckClick);
+printOut(newLine);
 
-
-//--- Part 4 ----------------------------------------------------------------------------------------------
+printOut("--- Part 4 ----------------------------------------------------------------------------------------------");
+// Car Selection: Populate radio buttons and display the selected car
 const CarTypes = ["Sedan", "SUV", "Convertible", "Hatchback"];
 
 function populateRadioButtons() {
     const divTask4Cars = document.getElementById("divTask4Cars");
+
+    // Create radio buttons dynamically for each car type
     CarTypes.forEach(car => {
         const radio = document.createElement("input");
         radio.type = "radio";
@@ -104,33 +80,43 @@ function populateRadioButtons() {
         const label = document.createElement("label");
         label.innerText = car;
 
-        divTask4Cars.appendChild(radio);
-        divTask4Cars.appendChild(label);
-        divTask4Cars.appendChild(document.createElement("br"));
+        divTask4Cars.appendChild(radio); // Add the radio button
+        divTask4Cars.appendChild(label); // Add the label
+        divTask4Cars.appendChild(document.createElement("br")); // Add a line break
     });
 }
 
 function cmbTask4CheckClick() {
+    // Get the selected car from the radio buttons
     const selectedCar = document.querySelector("input[name='task4Car']:checked");
-    document.getElementById("txtTask4Output").innerText =
-        selectedCar ? `Selected Car: ${selectedCar.value}` : "No car selected.";
+
+    // Display the selected car or a message if none is selected
+    printOut(selectedCar ? `Selected Car: ${selectedCar.value}` : "No car selected.");
 }
 populateRadioButtons();
+document.getElementById("cmbTask4CheckAnswer").addEventListener("click", cmbTask4CheckClick);
+printOut(newLine);
 
-
-//--- Part 5 ----------------------------------------------------------------------------------------------
+printOut("--- Part 5 ----------------------------------------------------------------------------------------------");
+// Animal Dropdown: Display selected animal
 function selectTask5AnimalsChange() {
-  const selectedAnimal = document.getElementById("selectTask5Animals").value;
-  document.getElementById("txtTask5Output").innerText = `Selected: ${selectedAnimal}`;
+    // Get the selected animal from the dropdown
+    const selectedAnimal = document.getElementById("selectTask5Animals").value;
+
+    // Output the selected animal
+    printOut(`Selected: ${selectedAnimal}`);
 }
 document.getElementById("selectTask5Animals").addEventListener("change", selectTask5AnimalsChange);
+printOut(newLine);
 
-
-//--- Part 6 ----------------------------------------------------------------------------------------------
+printOut("--- Part 6 ----------------------------------------------------------------------------------------------");
+// Name Dropdown: Populate dropdown with names and display the selected name
 const GirlsNames = ["Anna", "Sophia", "Emma", "Olivia"];
 
 function populateTask6Dropdown() {
     const dropdown = document.getElementById("selectTask6Girls");
+
+    // Populate the dropdown with names
     GirlsNames.forEach(name => {
         const option = document.createElement("option");
         option.value = name;
@@ -140,18 +126,24 @@ function populateTask6Dropdown() {
 }
 
 function selectTask6GirlsChange() {
+    // Get the selected name from the dropdown
     const selectedName = document.getElementById("selectTask6Girls").value;
-    document.getElementById("txtTask6Output").innerText = `Selected: ${selectedName}`;
+
+    // Output the selected name
+    printOut(`You selected: ${selectedName}`);
 }
 populateTask6Dropdown();
 document.getElementById("selectTask6Girls").addEventListener("change", selectTask6GirlsChange);
+printOut(newLine);
 
-
-//--- Part 7 ----------------------------------------------------------------------------------------------
+printOut("--- Part 7 ----------------------------------------------------------------------------------------------");
+// Movie Table: Add movies to a table with details
 const MovieGenre = ["Action", "Comedy", "Drama", "Sci-Fi"];
 
 function populateMovieGenreDropdown() {
     const dropdown = document.getElementById("selectMovieGenre");
+
+    // Populate the dropdown with genres
     MovieGenre.forEach(genre => {
         const option = document.createElement("option");
         option.value = genre;
@@ -161,20 +153,28 @@ function populateMovieGenreDropdown() {
 }
 
 function cmbAddMovieClick() {
-    const title = document.getElementById("filmtittel").value;
+    // Get values from the input fields
+    const title = document.getElementById("txtMovieTitle").value.trim();
     const genre = document.getElementById("selectMovieGenre").value;
-    const director = document.getElementById("filmregissør").value;
-    const rating = document.getElementById("filmrate").value;
+    const director = document.getElementById("txtMovieDirector").value.trim();
+    const rating = parseFloat(document.getElementById("txtMovieRate").value);
 
-    const table = document.getElementById("movieTable");
+    // Validate inputs to ensure they are not empty or invalid
+    if (!title || !director || isNaN(rating) || rating < 1 || rating > 10) {
+        alert("Please fill in all fields correctly.");
+        return;
+    }
+
+    // Add the movie details to the table
+    const table = document.getElementById("tblMovies");
     const row = table.insertRow();
 
-    [title, genre, director, rating].forEach(text => {
+    [title, genre, director, rating.toFixed(1)].forEach(text => {
         const cell = row.insertCell();
-        cell.innerText = text;
+        cell.innerText = text; // Add the text to the cell
     });
 }
 
 populateMovieGenreDropdown();
 document.getElementById("cmbAddMovie").addEventListener("click", cmbAddMovieClick);
-
+printOut(newLine);

@@ -5,13 +5,31 @@
     <title>Task 4.1</title>
   </head>
   <body style="display: table-cell; vertical-align: middle">
-    <h2><label for="txtOut">Output from Task 4.1:</label></h2>
+    <h2><label for="txtOut">Discussion Answers for Task 4.1:</label></h2>
     <div style="padding: 10px; min-width: 512px; border: darkblue thin solid; background-color: antiquewhite; font-family: 'Courier New', serif">
       <span id="txtOut" style="white-space: nowrap"></span>
     </div>
     <ol>
-      <li>[Write the question here, and copy this for more questions]</li>
-      <p>[Write your answer here, and copy this for more answers]</p>
+      <li>Why is object-oriented development so important in programming?</li>
+      <p>
+        Object-oriented programming helps organize code into reusable, modular, and scalable structures. It enables developers to model real-world concepts, ensures code is easier to maintain, and reduces complexity through encapsulation.
+      </p>
+      <li>In Task 1, we create a static object called "AccountType." Explain what this object is used for and how this type of object can help us in software development.</li>
+      <p>
+        The <code>AccountType</code> object holds predefined account types. It standardizes classifications, enhances readability, and centralizes related constants, reducing errors and simplifying updates.
+      </p>
+      <li>Discuss why we use encapsulation in classes. Why do we want to "hide" code within our class? Explain how we can create "private" and "public" members in a constructor function.</li>
+      <p>
+        Encapsulation hides internal details of a class, improving security, usability, and maintainability. Private members use the <code>#</code> prefix, while public members are accessible directly. Example:
+        <br />
+        <code>
+          class Example { #privateVariable = "hidden"; publicVariable = "visible"; publicMethod() { return this.#privateVariable; }}
+        </code>
+      </p>
+      <li>Explain what happens when we use the "new" command in JavaScript.</li>
+      <p>
+        The <code>new</code> command creates an instance of a class or constructor function. It binds <code>this</code> to the new object, sets the prototype, and returns the new object unless explicitly overridden.
+      </p>
     </ol>
     <script type="module" src="./task_4-1.mjs" defer></script>
   </body>
