@@ -42,7 +42,7 @@ function initEventListener(elementId, eventType, callback) {
       `Circumference = ${circumference}, Area = ${area}`;
   }
   
-  // Task 2: Word Counter
+  // Task 2: Word Counter 
   function handleWordInput(event) {
     if (event.key === 'Enter') {
       const inputField = document.getElementById('txtTask2Word');
